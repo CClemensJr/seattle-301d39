@@ -41,7 +41,7 @@ function displayPics(){
   //The previous line of code threw an error because the rando variable is scoped to the while loop, not the function, when declaring with let. The console.log was therefore out of scope.
   console.log(viewed);
 
-  for (const i = 0; i < 3; i++){
+  for (let i = 0; i < 3; i++){
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
@@ -129,7 +129,7 @@ if(localStorage.busmall){
   allProducts = JSON.parse(localStorage.busmall);
 } else {
   console.log('There is no local storage data; initialize app by creating instances');
-  for(const i = 0; i < names.length; i++) {
+  for(let i = 0; i < names.length; i++) {
     new Product(names[i]);
   }
 }
