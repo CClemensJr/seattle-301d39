@@ -35,9 +35,10 @@ function displayPics(){
       viewed.push(rando);
     }
   }
-  console.log(rando);
+
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the letiable declaration from `let to `let`.
   // PUT YOUR RESPONSE IN THIS COMMENT
+  //The previous line of code threw an error because the rando variable is scoped to the while loop, not the function, when declaring with let. The console.log was therefore out of scope.
   console.log(viewed);
 
   for (let i = 0; i < 3; i++){
