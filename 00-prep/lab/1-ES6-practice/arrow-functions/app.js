@@ -117,7 +117,7 @@ let objectLit = () => ({key1: 'value1', key2: 'value2', key3: 'value3'});
 console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
