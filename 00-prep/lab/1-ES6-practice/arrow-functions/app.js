@@ -106,7 +106,7 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 // Refactor each function into an arrow function.
 // Write your solutions on a single line wherever possible. 
 
-let sum = (a, b, c, d) => `${a}${b}${c}${d}`;
+let sum = ((a, b, c, d) => (a + b + c + d));
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
@@ -133,20 +133,13 @@ let message = name => `Hello, ${name}`;
 console.log(message('Allie'));
 
 
-let Student = function(name, age, hometown) {
+function Student(name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
-};
+}
 
-
-// let Student = (name, age, hometown) => ({
-//   this.name = name,
-//   this.age = age,
-//   this.hometown = hometown
-// });
-
-let joe = Student('Joe', 'Schmoe', 100);
+let joe = new Student('Joe', 'Schmoe', 100);
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
